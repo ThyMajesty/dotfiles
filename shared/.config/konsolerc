@@ -1,0 +1,11 @@
+[Desktop Entry]
+DefaultProfile=thymajesty.profile
+
+[General]
+ConfigVersion=1
+
+[MainWindow]
+MenuBar=Disabled
+
+[UiSettings]
+ColorScheme=

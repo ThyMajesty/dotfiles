@@ -1,0 +1,17 @@
+zsh
+zsh-completions
+zsh-autosuggestions
+zsh-syntax-highlighting
+starship
+eza
+bat
+ttf-jetbrains-mono-nerd
+noto-fonts-cjk
+inter-font
+fd
+ripgrep
+rustup
+stow
+sublime-text-4
+vscodium-bin
+fresh-editor

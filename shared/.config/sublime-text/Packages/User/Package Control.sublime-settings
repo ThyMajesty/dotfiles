@@ -1,0 +1,37 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"BracketHighlighter",
+		"CMake",
+		"Color Highlight",
+		"GDScript (Godot Engine)",
+		"GitGutter",
+		"Gruvbox Material Theme",
+		"HTML-CSS-JS Prettify",
+		"Indent XML",
+		"INI",
+		"JSON Reindent",
+		"LSP",
+		"LSP-bash",
+		"LSP-clangd",
+		"LSP-css",
+		"LSP-pyright",
+		"LSP-rust-analyzer",
+		"LSP-typescript",
+		"LSP-yaml",
+		"MarkdownEditing",
+		"MarkdownPreview",
+		"Package Control",
+		"QML",
+		"Sass",
+		"SideBarEnhancements",
+		"TrailingSpaces",
+		"TypescriptCompletion",
+		"ZSH",
+	],
+}
