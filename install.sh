@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-DOTFILES="$HOME/Documents/dev/misc/dotfiles"
+DOTFILES="$PWD"
 HOST=$(hostnamectl hostname | tr '[:upper:]' '[:lower:]')
 
 # ── yay check ─────────────────────────────────────────────────────
