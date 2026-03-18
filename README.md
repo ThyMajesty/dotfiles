@@ -3,7 +3,7 @@
 Managed with Stow.
 
 ## Structure
-
+```
 dotfiles/
 ├── shared/          # configs for all machines
 ├── tmhost/          # TMHost specific
@@ -15,7 +15,7 @@ dotfiles/
 │   ├── tmhost.txt   # TMHost specific packages
 │   └── tmsubber.txt # TMSubber specific packages
 └── install.sh       # bootstrap script
-
+```
 ## Initial Setup (fresh Arch install)
 
 Make sure `git` and `base-devel` are installed, then:
