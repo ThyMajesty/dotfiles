@@ -58,6 +58,12 @@ Sync to another machine:
 ## Updating
 
 After installing new VSCodium extensions or anything that needs re-dumping:
-    
+
     cd dotfiles
     ./update.sh
+
+On the other end:
+
+    cd dotfiles
+    git pull
+    ./install.sh
