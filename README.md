@@ -54,3 +54,10 @@ Sync to another machine:
 
     git pull
     stow -R shared
+
+## Updating
+
+After installing new VSCodium extensions or anything that needs re-dumping:
+    
+    cd dotfiles
+    ./update.sh

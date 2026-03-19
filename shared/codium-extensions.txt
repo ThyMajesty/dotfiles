@@ -1,3 +1,9 @@
 alfish.godot-files
+dtoplak.vscode-glsllint
 geequlim.godot-tools
+llvm-vs-code-extensions.vscode-clangd
+oderwat.indent-rainbow
+slevesque.shader
 snrico-moonlight.gruvbox-material-community
+usernamehw.errorlens
+yzhang.markdown-all-in-one

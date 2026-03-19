@@ -1,3 +1,40 @@
 {
-    "workbench.colorTheme": "Gruvbox Material Dark"
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "git.confirmSync": false,
+    "gruvboxMaterial.darkSelection": "green",
+    "gruvboxMaterial.colorfulSyntax": true,
+    "workbench.colorCustomizations": {
+        "list.activeSelectionBackground": "#3c3836",
+        "list.focusBackground": "#3c3836",
+        "list.focusOutline": "#00000000",
+        "list.activeSelectionForeground": "#d4be98",
+        
+        "editorGroupHeader.tabsBackground": "#282828",
+        "tab.activeBackground": "#3c3836",
+        "tab.inactiveBackground": "#282828",
+        "tab.activeBorder": "#00000000",
+        "tab.activeBorderTop": "#00000000",
+        "tab.unfocusedActiveBorder": "#00000000",
+        "tab.unfocusedActiveBorderTop": "#00000000",
+        
+        "tab.activeForeground": "#d4be98",
+        "tab.inactiveForeground": "#928374",
+        
+        "tab.changedBorderTop": "#d8a657",
+
+        "tab.hoverBackground": "#3c3836",
+        "tab.hoverBorder": "#00000000",
+        "tab.border": "#00000000",
+        "editorGroupHeader.border": "#00000000",
+        "tab.lastPinnedBorderColor": "#00000000",
+        "sideBarSectionHeader.border": "#504945",
+        "sideBar.border": "#504945",
+        "panel.border": "#504945"
+    },
+    "indentRainbow.colors": [
+        "#3c383640",
+        "#45403d40",
+        "#50494540",
+        "#5a524e40"
+    ]
 }
