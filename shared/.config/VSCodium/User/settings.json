@@ -36,5 +36,10 @@
         "#45403d40",
         "#50494540",
         "#5a524e40"
-    ]
+    ],
+    "editor.renderWhitespace": "all",
+    "editor.formatOnSave": true,
+    "[gdscript]": {
+        "editor.formatOnSave": true
+    }
 }
