@@ -49,7 +49,6 @@ ttf-jetbrains-mono-nerd
 nerd-fonts-inter
 inter-font
 noto-fonts-cjk
-qbittorrent
 vlc
 vlc-plugins-all
 syncthing
