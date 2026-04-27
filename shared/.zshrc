@@ -27,6 +27,8 @@ ZSH_MODULES=(
 for module in $ZSH_MODULES; do
   [[ -f "$ZSH_CONFIG/$module.zsh" ]] || echo "# $module.zsh" > "$ZSH_CONFIG/$module.zsh"
   source "$ZSH_CONFIG/$module.zsh"
+  # Local overrides
+  [[ -f "$ZSH_CONFIG/${module}_local.zsh" ]] && source "$ZSH_CONFIG/${module}_local.zsh"
 done
 
 # Prompt setup
