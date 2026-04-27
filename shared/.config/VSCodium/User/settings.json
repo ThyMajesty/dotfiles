@@ -8,7 +8,6 @@
         "list.focusBackground": "#3c3836",
         "list.focusOutline": "#00000000",
         "list.activeSelectionForeground": "#d4be98",
-        
         "editorGroupHeader.tabsBackground": "#282828",
         "tab.activeBackground": "#3c3836",
         "tab.inactiveBackground": "#282828",
@@ -16,12 +15,9 @@
         "tab.activeBorderTop": "#00000000",
         "tab.unfocusedActiveBorder": "#00000000",
         "tab.unfocusedActiveBorderTop": "#00000000",
-        
         "tab.activeForeground": "#d4be98",
         "tab.inactiveForeground": "#928374",
-        
         "tab.changedBorderTop": "#d8a657",
-
         "tab.hoverBackground": "#3c3836",
         "tab.hoverBorder": "#00000000",
         "tab.border": "#00000000",
@@ -38,8 +34,8 @@
         "#5a524e40"
     ],
     "editor.renderWhitespace": "all",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "[gdscript]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": false
     }
 }

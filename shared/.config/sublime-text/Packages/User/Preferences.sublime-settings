@@ -29,8 +29,8 @@
 	"tab_size": 4,
 	"translate_tabs_to_spaces": true,
 	"detect_indentation": false,
-	"trim_trailing_white_space_on_save": true,
-	"ensure_newline_at_eof_on_save": true,
+	"trim_trailing_white_space_on_save": false,
+	"ensure_newline_at_eof_on_save": false,
 	"use_tab_stops": true,
 
 	"selection_highlight": true,
