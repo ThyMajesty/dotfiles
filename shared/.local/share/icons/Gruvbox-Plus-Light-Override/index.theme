@@ -1,0 +1,9 @@
+[Icon Theme]
+Name=Gruvbox Plus Light Override
+Comment=Personal overrides for Gruvbox Plus Light
+Inherits=Gruvbox-Plus-Light
+Directories=.
+
+[.]
+Size=48
+Type=Fixed
