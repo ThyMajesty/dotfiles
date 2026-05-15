@@ -28,7 +28,7 @@ dotfiles/
 install.sh uses PWD so we need to be in the dotfiles root
 
 ## install.sh
-
+```
 Usage: ./install.sh [flags]
 
   -h  Help
@@ -37,8 +37,9 @@ Usage: ./install.sh [flags]
   -s  Stow configs
   -r  Root overrides (need root)
   -v  VSCodium extensions
+```
 
-  Example (full install):
+Example (full install):
   
     ./install.sh -ipsrv
 
