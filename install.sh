@@ -4,7 +4,7 @@ set -e
 DOTFILES="$PWD"
 HOST=$(hostnamectl hostname | tr '[:upper:]' '[:lower:]')
 
-# ── yay check ─────────────────────────────────────────────────────
+# yay check
 if ! command -v yay &> /dev/null; then
   echo "yay not found, installing..."
   sudo pacman -S --needed --noconfirm git base-devel
@@ -13,12 +13,12 @@ if ! command -v yay &> /dev/null; then
   cd "$DOTFILES"
 fi
 
-# ── stow check ────────────────────────────────────────────────────
+# stow check
 if ! command -v stow &> /dev/null; then
   yay -S --needed --noconfirm stow
 fi
 
-# ── packages ──────────────────────────────────────────────────────
+# packages
 echo "Installing shared packages..."
 yay -S --needed --noconfirm - < "$DOTFILES/packages/shared.txt"
 
@@ -27,16 +27,22 @@ if [ -f "$DOTFILES/packages/$HOST.txt" ]; then
   yay -S --needed --noconfirm - < "$DOTFILES/packages/$HOST.txt"
 fi
 
-# ── stow ──────────────────────────────────────────────────────────
+# stow
 echo "Stowing shared..."
 stow --target="$HOME" --dir="$DOTFILES" shared
 
 if [ -d "$DOTFILES/$HOST" ]; then
   echo "Stowing $HOST..."
-  stow --adopt --target="$HOME" --dir="$DOTFILES" "$HOST" && git -C "$DOTFILES" checkout -- .
+  stow --adopt --target="$HOME" --dir="$DOTFILES" "$HOST"
 fi
 
-# ── VSCodium extensions ───────────────────────────────────────────
+# root overrides
+echo "Installing root overrides..."
+sudo rm -rf /usr/share/icons/Gruvbox-Plus-Dark-Override
+sudo cp -r "$DOTFILES/root-overrides/usr/share/icons/Gruvbox-Plus-Dark-Override" /usr/share/icons/
+sudo kbuildsycoca6
+
+# VSCodium extensions
 if command -v codium &> /dev/null; then
   echo "Installing VSCodium extensions..."
   while IFS= read -r ext; do
