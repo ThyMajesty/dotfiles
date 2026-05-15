@@ -19,7 +19,7 @@ dotfiles/
 ```
 ## Initial Setup (fresh Arch install)
 
-Make sure `git` and `base-devel` are installed, then:
+`git` and `base-devel` must be installed
 
     git clone https://github.com/ThyMajesty/dotfiles.git
     cd dotfiles
@@ -38,21 +38,22 @@ Usage: ./install.sh [flags]
   -r  Root overrides (need root)
   -v  VSCodium extensions
 
-  Example: ./install.sh -ipsrv  (full install)
+  Example (full install):
+  
+    ./install.sh -ipsrv
 
-
-Note: After first run `.stowrc` will be symlinked to `~/.stowrc`,
-enabling bare `stow` commands from any directory.
+Note: After first run `.stowrc` will be symlinked to `~/.stowrc`, enabling bare `stow` commands from any directory. But it's safer/easier to use `install.sh -ipsrv` 
 
 ## Usage
 
 ### Update:
     `git pull`
     `./install.sh -psrv`
-    Or any other combinations of flags
+Or any other combinations of flags
+
 ### Add:
-    Depends:
-    - Root overrides are manual, see install.sh
+Depends:
+    - Root overrides are manual, see `install.sh`
     - For normal dotfiles either add to dotfiles or --adopt
         `stow -R shared`
         `stow -R hostname`
