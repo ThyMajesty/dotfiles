@@ -29,11 +29,11 @@ fi
 
 # ── stow ──────────────────────────────────────────────────────────
 echo "Stowing shared..."
-stow shared
+stow --target="$HOME" --dir="$DOTFILES" shared
 
 if [ -d "$DOTFILES/$HOST" ]; then
   echo "Stowing $HOST..."
-  stow --adopt "$HOST" && git -C "$DOTFILES" checkout -- .
+  stow --adopt --target="$HOME" --dir="$DOTFILES" "$HOST" && git -C "$DOTFILES" checkout -- .
 fi
 
 # ── VSCodium extensions ───────────────────────────────────────────
