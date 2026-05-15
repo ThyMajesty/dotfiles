@@ -28,9 +28,9 @@ dotfiles/
 install.sh uses PWD so we need to be in the dotfiles root
 
 ## install.sh
-```
-Usage: ./install.sh [flags]
 
+Usage: ./install.sh [flags]
+```
   -h  Help
   -i  Initial setup (yay, stow)
   -p  Install packages (need root)
