@@ -4,50 +4,95 @@ set -e
 DOTFILES="$PWD"
 HOST=$(hostnamectl hostname | tr '[:upper:]' '[:lower:]')
 
-# yay check
-if ! command -v yay &> /dev/null; then
-  echo "yay not found, installing..."
-  sudo pacman -S --needed --noconfirm git base-devel
-  git clone https://aur.archlinux.org/yay.git /tmp/yay
-  cd /tmp/yay && makepkg -si --noconfirm
-  cd "$DOTFILES"
-fi
+help() {
+  echo "Usage: $0 [flags]"
+  echo ""
+  echo "  -h  Help"
+  echo "  -i  Initial setup (yay, stow)"
+  echo "  -p  Install packages (need root)"
+  echo "  -s  Stow configs"
+  echo "  -r  Root overrides (need root)"
+  echo "  -v  VSCodium extensions"
+  echo ""
+  echo "  Example: $0 -ipsrv  (full install)"
+  exit 0
+}
 
-# stow check
-if ! command -v stow &> /dev/null; then
-  yay -S --needed --noconfirm stow
-fi
+do_initial() {
+  # check if yay is present
+  if ! command -v yay &> /dev/null; then
+    echo "yay not found, installing..."
+    sudo pacman -S --needed --noconfirm git base-devel
+    git clone https://aur.archlinux.org/yay.git /tmp/yay
+    cd /tmp/yay && makepkg -si --noconfirm
+    cd "$DOTFILES"
+  fi
+  # check if stow present
+  if ! command -v stow &> /dev/null; then
+    yay -S --needed --noconfirm stow
+  fi
+}
 
-# packages
-echo "Installing shared packages..."
-yay -S --needed --noconfirm - < "$DOTFILES/packages/shared.txt"
+do_packages() {
+  echo "Installing shared packages..."
+  yay -S --needed --noconfirm - < "$DOTFILES/packages/shared.txt"
+  if [ -f "$DOTFILES/packages/$HOST.txt" ]; then
+    echo "Installing $HOST packages..."
+    yay -S --needed --noconfirm - < "$DOTFILES/packages/$HOST.txt"
+  fi
+}
 
-if [ -f "$DOTFILES/packages/$HOST.txt" ]; then
-  echo "Installing $HOST packages..."
-  yay -S --needed --noconfirm - < "$DOTFILES/packages/$HOST.txt"
-fi
+do_stow() {
+  echo "Stowing shared..."
+  stow --target="$HOME" --dir="$DOTFILES" shared
+  if [ -d "$DOTFILES/$HOST" ]; then
+    echo "Stowing $HOST..."
+    stow --adopt --target="$HOME" --dir="$DOTFILES" "$HOST"
+  fi
+}
 
-# stow
-echo "Stowing shared..."
-stow --target="$HOME" --dir="$DOTFILES" shared
+do_root() {
+  echo "Installing root overrides..."
+  sudo rm -rf /usr/share/icons/Gruvbox-Plus-Dark-Override
+  sudo cp -r "$DOTFILES/root-overrides/usr/share/icons/Gruvbox-Plus-Dark-Override" /usr/share/icons/
+  sudo kbuildsycoca6
+}
 
-if [ -d "$DOTFILES/$HOST" ]; then
-  echo "Stowing $HOST..."
-  stow --adopt --target="$HOME" --dir="$DOTFILES" "$HOST"
-fi
+do_vscodium() {
+  if command -v codium &> /dev/null; then
+    echo "Installing VSCodium extensions..."
+    while IFS= read -r ext; do
+      codium --install-extension "$ext"
+    done < "$DOTFILES/shared/codium-extensions.txt"
+  fi
+}
 
-# root overrides
-echo "Installing root overrides..."
-sudo rm -rf /usr/share/icons/Gruvbox-Plus-Dark-Override
-sudo cp -r "$DOTFILES/root-overrides/usr/share/icons/Gruvbox-Plus-Dark-Override" /usr/share/icons/
-sudo kbuildsycoca6
 
-# VSCodium extensions
-if command -v codium &> /dev/null; then
-  echo "Installing VSCodium extensions..."
-  while IFS= read -r ext; do
-    codium --install-extension "$ext"
-  done < "$DOTFILES/shared/codium-extensions.txt"
-fi
+# no args - print help
+[ $# -eq 0 ] && help
+
+RUN_INITIAL=0
+RUN_PACKAGES=0
+RUN_STOW=0
+RUN_ROOT=0
+RUN_VSCODIUM=0
+
+while getopts "hipsrv" opt; do
+  case $opt in
+    h) help ;;
+    i) RUN_INITIAL=1 ;;
+    p) RUN_PACKAGES=1 ;;
+    s) RUN_STOW=1 ;;
+    r) RUN_ROOT=1 ;;
+    v) RUN_VSCODIUM=1 ;;
+    *) help ;;
+  esac
+done
+
+[ $RUN_INITIAL  -eq 1 ] && do_initial
+[ $RUN_PACKAGES -eq 1 ] && do_packages
+[ $RUN_STOW     -eq 1 ] && do_stow
+[ $RUN_ROOT     -eq 1 ] && do_root
+[ $RUN_VSCODIUM -eq 1 ] && do_vscodium
 
 echo "Done."
