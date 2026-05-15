@@ -4,6 +4,8 @@ Comment=Personal overrides for Gruvbox Plus Light
 Inherits=Gruvbox-Plus-Light
 Directories=.
 
+FollowsColorScheme=true
+
 [.]
 Size=48
 Type=Fixed
