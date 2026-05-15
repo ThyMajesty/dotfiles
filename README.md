@@ -56,5 +56,5 @@ Depends:
     - Root overrides are manual, see `install.sh`
     - For normal dotfiles either add to dotfiles and --restow/-R or --adopt
         
-        stow -R shared
-        stow -R hostname
+    stow -R shared
+    stow -R hostname
