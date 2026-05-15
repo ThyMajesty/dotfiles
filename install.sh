@@ -29,7 +29,7 @@ fi
 
 # ── stow ──────────────────────────────────────────────────────────
 echo "Stowing shared..."
-stow --adopt shared && git -C "$DOTFILES" checkout -- .
+stow shared
 
 if [ -d "$DOTFILES/$HOST" ]; then
   echo "Stowing $HOST..."
