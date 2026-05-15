@@ -2,10 +2,13 @@
 Name=Gruvbox Plus Dark Override
 Comment=Personal overrides for Gruvbox Plus Dark
 Inherits=Gruvbox-Plus-Dark
-Directories=.
+Directories=apps/scalable
 
 FollowsColorScheme=true
 
-[.]
-Size=48
-Type=Fixed
+[apps/scalable]
+Context=Applications
+Size=256
+MinSize=64
+MaxSize=512
+Type=Scalable
