@@ -10,6 +10,7 @@ dotfiles/
 │   └── .stowrc      # stow config for TMHost
 ├── tmsubber/        # TMSubber specific
 │   └── .stowrc      # stow config for TMSubber
+├── root-overrides   # dump to /. needed when used by a different user or needs su
 ├── packages/
 │   ├── shared.txt   # packages installed on all machines
 │   ├── tmhost.txt   # TMHost specific packages
@@ -22,48 +23,36 @@ Make sure `git` and `base-devel` are installed, then:
 
     git clone https://github.com/ThyMajesty/dotfiles.git
     cd dotfiles
-    ./install.sh
+    ./install.sh -ipsrv
 
-install.sh uses PWD so we need to be in the correct location
+install.sh uses PWD so we need to be in the dotfiles root
 
-The script will:
-- Install `yay` if missing
-- Install `stow` if missing
-- Install packages from `packages/shared.txt` and `packages/<hostname>.txt`
-- Symlink host-specific `.stowrc` to `~/.stowrc` if not present
-- Stow shared and host-specific configs (repo wins on conflict)
-- Install VSCodium extensions
+## install.sh
+
+Usage: ./install.sh [flags]
+
+  -h  Help
+  -i  Initial setup (yay, stow)
+  -p  Install packages (need root)
+  -s  Stow configs
+  -r  Root overrides (need root)
+  -v  VSCodium extensions
+
+  Example: ./install.sh -ipsrv  (full install)
+
 
 Note: After first run `.stowrc` will be symlinked to `~/.stowrc`,
 enabling bare `stow` commands from any directory.
 
-## Daily Usage
+## Usage
 
-Add a new config:
-
-    mv ~/.config/something <location>/dotfiles/shared/.config/
-    stow shared
-
-Update a config — symlink, changes are reflected in the repo.
-
-Restow after adding/removing files:
-
-    stow -R shared
-
-Sync to another machine:
-
-    git pull
-    stow -R shared
-
-## Updating
-
-After installing new VSCodium extensions or anything that needs re-dumping:
-
-    cd dotfiles
-    ./update.sh
-
-On the other end:
-
-    cd dotfiles
-    git pull
-    ./install.sh
+### Update:
+    `git pull`
+    `./install.sh -psrv`
+    Or any other combinations of flags
+### Add:
+    Depends:
+    - Root overrides are manual, see install.sh
+    - For normal dotfiles either add to dotfiles or --adopt
+        `stow -R shared`
+        `stow -R hostname`
