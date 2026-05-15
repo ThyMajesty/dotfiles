@@ -47,13 +47,14 @@ Note: After first run `.stowrc` will be symlinked to `~/.stowrc`, enabling bare 
 ## Usage
 
 ### Update:
-    `git pull`
-    `./install.sh -psrv`
+    git pull
+    ./install.sh -psrv
 Or any other combinations of flags
 
 ### Add:
 Depends:
     - Root overrides are manual, see `install.sh`
-    - For normal dotfiles either add to dotfiles or --adopt
-        `stow -R shared`
-        `stow -R hostname`
+    - For normal dotfiles either add to dotfiles and --restow/-R or --adopt
+        
+        stow -R shared
+        stow -R hostname
