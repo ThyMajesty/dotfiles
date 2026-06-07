@@ -3,7 +3,7 @@ format = """
 ╰─ $character
 """
 
-scan_timeout = 10
+scan_timeout = 500
 
 [character]
 success_symbol = "[❯❯](bold green)"
