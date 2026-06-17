@@ -1,8 +1,13 @@
 alfish.godot-files
+biomejs.biome
+continue.continue
 dtoplak.vscode-glsllint
+editorconfig.editorconfig
 geequlim.godot-tools
 llvm-vs-code-extensions.vscode-clangd
 oderwat.indent-rainbow
+redhat.vscode-yaml
+saoudrizwan.claude-dev
 slevesque.shader
 snrico-moonlight.gruvbox-material-community
 usernamehw.errorlens
