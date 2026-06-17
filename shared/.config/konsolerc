@@ -4,8 +4,14 @@ DefaultProfile=thymajesty.profile
 [General]
 ConfigVersion=1
 
+[KonsoleWindow]
+ForceNewTabs=true
+
 [MainWindow]
 MenuBar=Disabled
+
+[TabBar]
+CloseTabOnMiddleMouseButton=true
 
 [UiSettings]
 ColorScheme=

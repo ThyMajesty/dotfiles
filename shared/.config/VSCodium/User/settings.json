@@ -4,7 +4,7 @@
     "gruvboxMaterial.darkSelection": "green",
     "gruvboxMaterial.colorfulSyntax": true,
     "workbench.colorCustomizations": {
-        "list.activeSelectionBackground": "#3c3836",
+        "list.activeSelectionBackground": "#504945",
         "list.focusBackground": "#3c3836",
         "list.focusOutline": "#00000000",
         "list.activeSelectionForeground": "#d4be98",
@@ -37,5 +37,23 @@
     "editor.formatOnSave": false,
     "[gdscript]": {
         "editor.formatOnSave": false
-    }
+    },
+    "redhat.telemetry.enabled": false,
+    "[dockercompose]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "json.schemaDownload.trustedDomains": {
+        "https://schemastore.azurewebsites.net/": true,
+        "https://raw.githubusercontent.com/microsoft/vscode/": true,
+        "https://raw.githubusercontent.com/devcontainers/spec/": true,
+        "https://www.schemastore.org/": true,
+        "https://json.schemastore.org/": true,
+        "https://json-schema.org/": true,
+        "https://developer.microsoft.com/json-schemas/": true,
+        "https://biomejs.dev": true
+    },
+    "biome.lsp.trace.server": "messages",
+    "biome.lsp.watcher.kind": "recommended",
+    "js/ts.format.semicolons": "insert"
+    
 }
