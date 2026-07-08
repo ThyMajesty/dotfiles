@@ -54,6 +54,7 @@
     },
     "biome.lsp.trace.server": "messages",
     "biome.lsp.watcher.kind": "recommended",
-    "js/ts.format.semicolons": "insert"
+    "js/ts.format.semicolons": "insert",
+    "editor.autoIndentOnPaste": true
     
 }
