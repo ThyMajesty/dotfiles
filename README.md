@@ -37,6 +37,7 @@ Usage: ./install.sh [flags]
   -s  Stow configs
   -r  Root overrides (need root)
   -v  VSCodium extensions
+  -e  Extract VSCodium extensions list
 ```
 
 Example (full install):
