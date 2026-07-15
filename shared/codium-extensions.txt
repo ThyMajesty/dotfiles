@@ -5,6 +5,9 @@ dtoplak.vscode-glsllint
 editorconfig.editorconfig
 geequlim.godot-tools
 llvm-vs-code-extensions.vscode-clangd
+ms-python.debugpy
+ms-python.python
+ms-python.vscode-python-envs
 oderwat.indent-rainbow
 redhat.vscode-yaml
 saoudrizwan.claude-dev
