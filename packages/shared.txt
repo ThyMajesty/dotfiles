@@ -59,3 +59,4 @@ smartmontools
 nvtop
 helvum
 gruvbox-plus-icon-theme-git
+direnv
