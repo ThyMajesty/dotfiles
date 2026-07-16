@@ -4,9 +4,11 @@ dtoplak.vscode-glsllint
 editorconfig.editorconfig
 geequlim.godot-tools
 llvm-vs-code-extensions.vscode-clangd
+mkhl.direnv
 ms-python.debugpy
 ms-python.python
 ms-python.vscode-python-envs
+ms-vscode.cmake-tools
 oderwat.indent-rainbow
 redhat.vscode-yaml
 saoudrizwan.claude-dev
