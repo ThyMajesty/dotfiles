@@ -1,5 +1,4 @@
 alfish.godot-files
-biomejs.biome
 continue.continue
 dtoplak.vscode-glsllint
 editorconfig.editorconfig
@@ -13,5 +12,7 @@ redhat.vscode-yaml
 saoudrizwan.claude-dev
 slevesque.shader
 snrico-moonlight.gruvbox-material-community
+twxs.cmake
 usernamehw.errorlens
+vadimcn.vscode-lldb
 yzhang.markdown-all-in-one
