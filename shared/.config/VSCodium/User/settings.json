@@ -56,5 +56,10 @@
     "biome.lsp.watcher.kind": "recommended",
     "js/ts.format.semicolons": "insert",
     "editor.autoIndentOnPaste": true,
-    
+    "cmake.debugConfig": {
+        "type": "lldb",
+        "request": "launch",
+    },
+    "debug.breakpointsView.presentation": "tree",
+    "cmake.buildTask": true
 }

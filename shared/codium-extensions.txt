@@ -1,5 +1,4 @@
 alfish.godot-files
-continue.continue
 dtoplak.vscode-glsllint
 editorconfig.editorconfig
 geequlim.godot-tools
@@ -9,12 +8,9 @@ ms-python.debugpy
 ms-python.python
 ms-python.vscode-python-envs
 ms-vscode.cmake-tools
-oderwat.indent-rainbow
 redhat.vscode-yaml
-saoudrizwan.claude-dev
 slevesque.shader
 snrico-moonlight.gruvbox-material-community
-twxs.cmake
 usernamehw.errorlens
 vadimcn.vscode-lldb
 yzhang.markdown-all-in-one
