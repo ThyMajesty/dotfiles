@@ -11,3 +11,4 @@ alias cat='bat --style header --no-pager'
 
 # Unility
 alias cddot='cd ~/Documents/dev/misc/dotfiles'
+alias cdvulk='cd ~/opt/vulkan-sdk/'
