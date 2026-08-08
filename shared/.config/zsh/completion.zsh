@@ -1,7 +1,9 @@
 # completion.zsh
 
+zmodload zsh/complist
 zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle ':completion:*' max-errors 6 numeric
+zstyle ':completion:*' menu select
 zstyle :compinstall filename '/home/thymajesty/.zshrc'
 autoload -Uz compinit
 compinit
