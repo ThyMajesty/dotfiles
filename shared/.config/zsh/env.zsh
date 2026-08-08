@@ -9,3 +9,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # add direnv
 eval "$(direnv hook zsh)"
+
+# set vulkan evn
+source ~/opt/vulkan-sdk/current/setup-env.sh --set-dep-ld
