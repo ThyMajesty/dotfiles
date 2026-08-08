@@ -54,7 +54,6 @@ vlc-plugins-all
 syncthing
 syncthingtray-qt6
 timeshift
-reflector
 smartmontools
 nvtop
 helvum
