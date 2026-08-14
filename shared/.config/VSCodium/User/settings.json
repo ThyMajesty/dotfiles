@@ -61,5 +61,14 @@
         "request": "launch",
     },
     "debug.breakpointsView.presentation": "tree",
-    "cmake.buildTask": true
+    "cmake.buildTask": true,
+    "explorer.confirmPasteNative": false,
+    "cmake.configureEnvironment": {
+        "VULKAN_SDK": "${env:HOME}/opt/vulkan-sdk/current/x86_64",
+        "PATH": "${env:HOME}/opt/vulkan-sdk/current/x86_64/bin:${env:PATH}"
+    },
+    "[markdown]": {
+        "diffEditor.ignoreTrimWhitespace": true
+    },
+    "clangd.path": "/home/thymajesty/.config/VSCodium/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/22.1.6/clangd_22.1.6/bin/clangd"
 }
