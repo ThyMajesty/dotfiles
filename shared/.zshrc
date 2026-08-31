@@ -21,6 +21,7 @@ ZSH_MODULES=(
   aliases
   keybinds
   completion
+  utility
 )
 
 # Modules: Create if none; Load in order

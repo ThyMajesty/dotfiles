@@ -9,6 +9,6 @@ alias tree='eza -T -a --icons --ignore-glob ".git*"'
 alias tree-git='eza -T -a --icons'
 alias cat='bat --style header --no-pager'
 
-# Unility
+# Utility
 alias cddot='cd ~/Documents/dev/misc/dotfiles'
 alias cdvulk='cd ~/opt/vulkan-sdk/'
